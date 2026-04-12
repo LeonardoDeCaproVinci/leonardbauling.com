@@ -42,3 +42,14 @@ Open `http://localhost:8080`.
 ## Deployment
 
 Deploy as static hosting (GitHub Pages, Cloudflare Pages, Netlify, or Hostinger static path).
+
+## Local IIS deploy
+
+Run from an elevated PowerShell window:
+
+```powershell
+cd C:\Development\leonardbauling.com
+.\scripts\Deploy-LocalIIS.ps1 -Port 5151
+```
+
+Then open `http://localhost:5151/`.
