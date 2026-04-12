@@ -49,6 +49,7 @@ Run from an elevated PowerShell window:
 
 ```powershell
 cd C:\Development\leonardbauling.com
+.\scripts\Install-IISPrereqs.ps1
 .\scripts\Deploy-LocalIIS.ps1 -Port 5151
 ```
 
