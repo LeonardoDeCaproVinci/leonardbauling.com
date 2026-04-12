@@ -1,0 +1,22 @@
+[
+  {
+    "title": "MyMissionHub Release Automation",
+    "summary": "Designed and implemented GitHub Actions release automation with auto version bumping, artifact packaging, and deployment flow controls to reduce manual release overhead.",
+    "tags": ["GitHub Actions", ".NET", "CI/CD", "Release Engineering"]
+  },
+  {
+    "title": "Desktop App Update Path Modernization",
+    "summary": "Reframed desktop updates away from ClickOnce constraints to a web-hosted manifest and package model with startup version checks and guided update prompts.",
+    "tags": [".NET 10", "WPF", "Update Strategy", "Deployment"]
+  },
+  {
+    "title": "AI-Guided Team Workflow Integration",
+    "summary": "Rolled out instruction-governed, persona-based AI collaboration patterns to improve consistency across architecture, development, QA, and release operations.",
+    "tags": ["AI Workflows", "Governance", "Team Delivery"]
+  },
+  {
+    "title": "Enterprise Platform Transition Leadership",
+    "summary": "Led modernization planning and implementation across integration, web, and data layers, balancing technical debt reduction against ongoing delivery commitments.",
+    "tags": ["Modernization", "Integration", "Architecture Leadership"]
+  }
+]
