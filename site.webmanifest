@@ -1,0 +1,20 @@
+{
+  "name": "Leonard Bauling",
+  "short_name": "Leonard",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#071524",
+  "theme_color": "#071524",
+  "icons": [
+    {
+      "src": "/assets/img/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

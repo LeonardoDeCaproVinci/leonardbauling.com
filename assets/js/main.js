@@ -2,6 +2,7 @@ const navToggle = document.getElementById("nav-toggle");
 const siteNav = document.getElementById("site-nav");
 const year = document.getElementById("year");
 const projectGrid = document.getElementById("project-grid");
+const emailAction = document.getElementById("email-action");
 
 if (year) {
   year.textContent = new Date().getFullYear();
@@ -66,3 +67,14 @@ async function loadProjects() {
 }
 
 loadProjects();
+
+if (emailAction) {
+  emailAction.addEventListener("click", () => {
+    const user = "hello";
+    const host = "leonardbauling.com";
+    const email = `${user}@${host}`;
+    emailAction.textContent = email;
+    emailAction.setAttribute("aria-label", `Email ${email}`);
+    window.location.href = `mailto:${email}`;
+  });
+}
