@@ -9,6 +9,7 @@ const emailFallback = document.getElementById("email-fallback");
 const emailLink = document.getElementById("email-link");
 const emailCopy = document.getElementById("email-copy");
 const emailStatus = document.getElementById("email-status");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (year) {
   year.textContent = new Date().getFullYear();
@@ -28,7 +29,7 @@ if (navToggle && siteNav) {
   });
 }
 
-if ("IntersectionObserver" in window) {
+if ("IntersectionObserver" in window && !prefersReducedMotion) {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -43,6 +44,50 @@ if ("IntersectionObserver" in window) {
   document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 } else {
   document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-visible"));
+}
+
+const navLinks = siteNav ? Array.from(siteNav.querySelectorAll('a[href^="#"]')) : [];
+const navTargets = navLinks
+  .map((link) => {
+    const sectionId = link.getAttribute("href")?.slice(1);
+    if (!sectionId) return null;
+    const section = document.getElementById(sectionId);
+    if (!section) return null;
+    return { link, section };
+  })
+  .filter(Boolean);
+
+function setActiveNavLink(activeId) {
+  navLinks.forEach((link) => {
+    const isActive = link.getAttribute("href") === `#${activeId}`;
+    link.classList.toggle("is-active", isActive);
+    if (isActive) {
+      link.setAttribute("aria-current", "true");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
+}
+
+if (navTargets.length && "IntersectionObserver" in window) {
+  const activeObserver = new IntersectionObserver(
+    (entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+      if (visible.length) {
+        setActiveNavLink(visible[0].target.id);
+      }
+    },
+    {
+      root: null,
+      rootMargin: "-35% 0px -55% 0px",
+      threshold: [0.2, 0.4, 0.6]
+    }
+  );
+
+  navTargets.forEach(({ section }) => activeObserver.observe(section));
 }
 
 async function loadProjects() {
