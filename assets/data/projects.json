@@ -1,27 +1,27 @@
 [
   {
     "title": "WiseTech Academy LMS Architecture",
-    "summary": "Architected and delivered core LMS components across billing, integrations, proctoring, and CI/CD pipelines to improve platform extensibility, release reliability, and operational scalability.",
+    "summary": "Defined and delivered LMS architecture across billing, integrations, proctoring, and CI/CD foundations, improving platform extensibility and release reliability.",
     "tags": ["LMS", "Architecture", "Billing", "Integrations", "Proctoring", "CI/CD"]
   },
   {
     "title": "CargoWise Integration and ETL Orchestration",
-    "summary": "Designed and built ETL-driven integration workflows for XML and document exchange between CargoWise and external ecosystems including customs, government agencies, ocean liners, and air transport providers.",
+    "summary": "Designed and built ETL-driven XML integration workflows between CargoWise and external ecosystems including customs, government agencies, ocean liners, and air transport providers.",
     "tags": ["CargoWise", "ETL", "XML", "System Integration", "Workflow Orchestration", "Logistics"]
   },
   {
     "title": "MyMissionHub Release Automation",
-    "summary": "Designed and implemented GitHub Actions release automation with auto version bumping, artifact packaging, and deployment flow controls to reduce manual release overhead.",
+    "summary": "Implemented GitHub Actions release automation with auto versioning, artifact packaging, and deployment guardrails to reduce manual overhead and improve release consistency.",
     "tags": ["GitHub Actions", ".NET", "CI/CD", "Release Engineering"]
   },
   {
-    "title": "WiseTech Academy Core Platform Delivery",
-    "summary": "Led core component design and development for WiseTech Academy LMS domains including billing, integrations, and proctoring, with delivery patterns aligned to scalable CI/CD operations.",
-    "tags": ["WiseTech Academy", "LMS", "Core Components", "Billing", "Integrations", "Proctoring", "CI/CD"]
+    "title": "LMS Billing and Proctoring Delivery",
+    "summary": "Led billing and proctoring delivery from architecture through implementation, aligning product requirements, integration dependencies, and CI/CD-ready rollout patterns.",
+    "tags": ["LMS", "Billing", "Proctoring", "Implementation Leadership", "CI/CD"]
   },
   {
     "title": "AI-Guided Team Workflow Integration",
-    "summary": "Rolled out instruction-governed, persona-based AI collaboration patterns to improve consistency across architecture, development, QA, and release operations.",
+    "summary": "Rolled out instruction-governed, persona-based AI collaboration patterns to improve consistency across architecture, development, QA, and release operations while preserving clear role accountability.",
     "tags": ["AI Workflows", "Governance", "Team Delivery"]
   },
   {
