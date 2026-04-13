@@ -1,13 +1,23 @@
 [
   {
+    "title": "WiseTech Academy LMS Architecture",
+    "summary": "Architected and delivered core LMS components across billing, integrations, proctoring, and CI/CD pipelines to improve platform extensibility, release reliability, and operational scalability.",
+    "tags": ["LMS", "Architecture", "Billing", "Integrations", "Proctoring", "CI/CD"]
+  },
+  {
+    "title": "CargoWise Integration and ETL Orchestration",
+    "summary": "Designed and built ETL-driven integration workflows for XML and document exchange between CargoWise and external ecosystems including customs, government agencies, ocean liners, and air transport providers.",
+    "tags": ["CargoWise", "ETL", "XML", "System Integration", "Workflow Orchestration", "Logistics"]
+  },
+  {
     "title": "MyMissionHub Release Automation",
     "summary": "Designed and implemented GitHub Actions release automation with auto version bumping, artifact packaging, and deployment flow controls to reduce manual release overhead.",
     "tags": ["GitHub Actions", ".NET", "CI/CD", "Release Engineering"]
   },
   {
-    "title": "Desktop App Update Path Modernization",
-    "summary": "Reframed desktop updates away from ClickOnce constraints to a web-hosted manifest and package model with startup version checks and guided update prompts.",
-    "tags": [".NET 10", "WPF", "Update Strategy", "Deployment"]
+    "title": "WiseTech Academy Core Platform Delivery",
+    "summary": "Led core component design and development for WiseTech Academy LMS domains including billing, integrations, and proctoring, with delivery patterns aligned to scalable CI/CD operations.",
+    "tags": ["WiseTech Academy", "LMS", "Core Components", "Billing", "Integrations", "Proctoring", "CI/CD"]
   },
   {
     "title": "AI-Guided Team Workflow Integration",

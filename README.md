@@ -50,7 +50,11 @@ Run from an elevated PowerShell window:
 ```powershell
 cd C:\Development\leonardbauling.com
 .\scripts\Install-IISPrereqs.ps1
-.\scripts\Deploy-LocalIIS.ps1 -Port 5151
+.\scripts\Deploy-LocalIIS.ps1 -Port 5151 -UseSourceAsPhysicalPath
 ```
 
 Then open `http://localhost:5151/`.
+
+Notes:
+- `-UseSourceAsPhysicalPath` points IIS directly to the repo folder for instant local updates.
+- Omit `-UseSourceAsPhysicalPath` to use the copy-to-`C:\inetpub\<site>` deployment mode.
