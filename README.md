@@ -43,6 +43,32 @@ Open `http://localhost:8080`.
 
 Deploy as static hosting (GitHub Pages, Cloudflare Pages, Netlify, or Hostinger static path).
 
+## Hostinger CI/CD (GitHub Actions)
+
+This repo includes an automated deployment workflow:
+
+- Workflow file: `.github/workflows/deploy-personal-site.yml`
+- Auto trigger: push to `main` when site files change
+- Manual trigger: `workflow_dispatch` (with optional remote clean)
+
+### Required repository secrets
+
+Set these under GitHub repository settings (`Settings > Secrets and variables > Actions`):
+
+- `HOSTINGER_FTP_HOST`
+- `HOSTINGER_FTP_USER`
+- `HOSTINGER_FTP_PASSWORD`
+- `HOSTINGER_FTP_PROTOCOL` (`ftp` or `ftps`)
+- `HOSTINGER_FTP_PORT` (for example `21` or `990`)
+- `HOSTINGER_FTP_TARGET` (for example `/public_html/`)
+
+### Deploy behavior
+
+- Uploads site files from repo root to `HOSTINGER_FTP_TARGET`
+- Excludes `.git`, `.github`, `scripts`, and `README.md`
+- Uses sync state to keep uploads efficient
+- Supports a manual "clean remote" mode for full replacement when needed
+
 ## Local IIS deploy
 
 Run from an elevated PowerShell window:

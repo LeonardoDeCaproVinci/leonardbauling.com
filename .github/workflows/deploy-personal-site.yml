@@ -1,0 +1,83 @@
+name: Deploy Personal Site
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "index.html"
+      - "robots.txt"
+      - "sitemap.xml"
+      - "site.webmanifest"
+      - "web.config"
+      - "CNAME"
+      - "assets/**"
+      - ".github/workflows/deploy-personal-site.yml"
+  workflow_dispatch:
+    inputs:
+      clean_remote:
+        description: "Dangerously delete remote files not present locally before upload"
+        required: false
+        default: false
+        type: boolean
+
+concurrency:
+  group: deploy-personal-site-main
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate required Hostinger secrets
+        shell: bash
+        env:
+          HOST: ${{ secrets.HOSTINGER_FTP_HOST }}
+          USERNAME: ${{ secrets.HOSTINGER_FTP_USER }}
+          PASSWORD: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          PROTOCOL: ${{ secrets.HOSTINGER_FTP_PROTOCOL }}
+          PORT: ${{ secrets.HOSTINGER_FTP_PORT }}
+          TARGET: ${{ secrets.HOSTINGER_FTP_TARGET }}
+        run: |
+          missing=0
+          for name in HOST USERNAME PASSWORD PROTOCOL PORT TARGET; do
+            value="${!name}"
+            if [ -z "$value" ]; then
+              echo "::error::Missing required repository secret for $name"
+              missing=1
+            fi
+          done
+          if [ "$missing" -ne 0 ]; then
+            exit 1
+          fi
+
+      - name: Resolve deploy mode
+        id: mode
+        shell: bash
+        run: |
+          clean_remote="false"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ github.event.inputs.clean_remote }}" = "true" ]; then
+            clean_remote="true"
+          fi
+          echo "clean_remote=$clean_remote" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy to Hostinger via FTP/FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.HOSTINGER_FTP_HOST }}
+          username: ${{ secrets.HOSTINGER_FTP_USER }}
+          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          protocol: ${{ secrets.HOSTINGER_FTP_PROTOCOL }}
+          port: ${{ secrets.HOSTINGER_FTP_PORT }}
+          local-dir: ./
+          server-dir: ${{ secrets.HOSTINGER_FTP_TARGET }}
+          state-name: .ftp-deploy-sync-state-personal-site.json
+          dangerous-clean-slate: ${{ steps.mode.outputs.clean_remote }}
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/scripts/**
+            **/README.md
