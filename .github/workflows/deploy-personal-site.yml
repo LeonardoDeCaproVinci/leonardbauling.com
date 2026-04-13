@@ -64,6 +64,18 @@ jobs:
           fi
           echo "clean_remote=$clean_remote" >> "$GITHUB_OUTPUT"
 
+      - name: Resolve server target path
+        id: target
+        shell: bash
+        env:
+          TARGET: ${{ secrets.HOSTINGER_FTP_TARGET }}
+        run: |
+          target="$TARGET"
+          if [[ "$target" != */ ]]; then
+            target="${target}/"
+          fi
+          echo "server_dir=$target" >> "$GITHUB_OUTPUT"
+
       - name: Deploy to Hostinger via FTP/FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -73,7 +85,7 @@ jobs:
           protocol: ${{ secrets.HOSTINGER_FTP_PROTOCOL }}
           port: ${{ secrets.HOSTINGER_FTP_PORT }}
           local-dir: ./
-          server-dir: ${{ secrets.HOSTINGER_FTP_TARGET }}
+          server-dir: ${{ steps.target.outputs.server_dir }}
           state-name: .ftp-deploy-sync-state-personal-site.json
           dangerous-clean-slate: ${{ steps.mode.outputs.clean_remote }}
           exclude: |
