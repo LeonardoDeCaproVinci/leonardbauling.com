@@ -1,4 +1,4 @@
-const BUILD_ID = "20260413b";
+const BUILD_ID = "20260626a";
 
 const navToggle = document.getElementById("nav-toggle");
 const siteNav = document.getElementById("site-nav");
@@ -23,6 +23,10 @@ if (navToggle && siteNav) {
 
   siteNav.querySelectorAll("a").forEach((anchor) => {
     anchor.addEventListener("click", () => {
+      const sectionId = anchor.getAttribute("href")?.slice(1);
+      if (sectionId) {
+        setActiveNavLink(sectionId);
+      }
       siteNav.classList.remove("is-open");
       navToggle.setAttribute("aria-expanded", "false");
     });
@@ -69,25 +73,27 @@ function setActiveNavLink(activeId) {
   });
 }
 
-if (navTargets.length && "IntersectionObserver" in window) {
-  const activeObserver = new IntersectionObserver(
-    (entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+function updateActiveNavFromScroll() {
+  if (!navTargets.length) return;
 
-      if (visible.length) {
-        setActiveNavLink(visible[0].target.id);
-      }
-    },
-    {
-      root: null,
-      rootMargin: "-35% 0px -55% 0px",
-      threshold: [0.2, 0.4, 0.6]
+  const headerOffset = 120;
+  const scrollPosition = window.scrollY + headerOffset;
+  let activeId = navTargets[0].section.id;
+
+  navTargets.forEach(({ section }) => {
+    if (section.offsetTop <= scrollPosition) {
+      activeId = section.id;
     }
-  );
+  });
 
-  navTargets.forEach(({ section }) => activeObserver.observe(section));
+  setActiveNavLink(activeId);
+}
+
+if (navTargets.length) {
+  updateActiveNavFromScroll();
+  window.addEventListener("scroll", updateActiveNavFromScroll, { passive: true });
+  window.addEventListener("resize", updateActiveNavFromScroll);
+  window.addEventListener("hashchange", updateActiveNavFromScroll);
 }
 
 async function loadProjects() {

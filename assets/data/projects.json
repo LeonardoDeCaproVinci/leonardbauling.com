@@ -5,28 +5,28 @@
     "tags": ["LMS", "Architecture", "Billing", "Integrations", "Proctoring", "CI/CD"]
   },
   {
+    "title": "WiseTech Academy Content Platform Convergence",
+    "summary": "Led architecture convergence across authoring, content, and delivery streams for WiseTech Academy, defining a canonical content model, governance path, and migration strategy to unify fragmented repositories into one scalable platform spine.",
+    "tags": ["Content Platform", "Architecture", "Migration Strategy", "Governance", "LMS"]
+  },
+  {
+    "title": "WiseTech Academy Packaging and Validation Pipeline",
+    "summary": "Drove a schema-led content pipeline through validation, reference integrity, external asset migration, and SCORM packaging so academy content could move from design intent to repeatable build and release workflows.",
+    "tags": ["SCORM", "CI/CD", "Schema Design", "Validation", "Content Operations"]
+  },
+  {
     "title": "CargoWise Integration and ETL Orchestration",
     "summary": "Designed and built ETL-driven XML integration workflows between CargoWise and external ecosystems including customs, government agencies, ocean liners, and air transport providers.",
     "tags": ["CargoWise", "ETL", "XML", "System Integration", "Workflow Orchestration", "Logistics"]
   },
   {
-    "title": "MyMissionHub Release Automation",
-    "summary": "Implemented GitHub Actions release automation with auto versioning, artifact packaging, and deployment guardrails to reduce manual overhead and improve release consistency.",
-    "tags": ["GitHub Actions", ".NET", "CI/CD", "Release Engineering"]
+    "title": "Platform Delivery and Container Operations",
+    "summary": "Worked across containerised delivery and platform operations using Docker, Quay, Argo CD, OpenShift, and CI/CD deployment pipelines to move applications from local engineering environments into repeatable hosted runtime paths.",
+    "tags": ["Docker", "Quay", "Argo CD", "OpenShift", "CI/CD", "Platform Operations"]
   },
   {
-    "title": "LMS Billing and Proctoring Delivery",
-    "summary": "Led billing and proctoring delivery from architecture through implementation, aligning product requirements, integration dependencies, and CI/CD-ready rollout patterns.",
-    "tags": ["LMS", "Billing", "Proctoring", "Implementation Leadership", "CI/CD"]
-  },
-  {
-    "title": "AI-Guided Team Workflow Integration",
-    "summary": "Rolled out instruction-governed, persona-based AI collaboration patterns to improve consistency across architecture, development, QA, and release operations while preserving clear role accountability.",
-    "tags": ["AI Workflows", "Governance", "Team Delivery"]
-  },
-  {
-    "title": "Enterprise Platform Transition Leadership",
-    "summary": "Led modernization planning and implementation across integration, web, and data layers, balancing technical debt reduction against ongoing delivery commitments.",
-    "tags": ["Modernization", "Integration", "Architecture Leadership"]
+    "title": "Orbitra Product Suite",
+    "summary": "Designing and building a private suite of applications covering identity, budgeting, travel operations, and personal productivity, with products focused on authentication, ledger-based budgeting, reservation workflows, and structured delivery tooling.",
+    "tags": ["Private Product Suite", "Identity", "Budgeting", "Travel Operations", "Product Design", ".NET"]
   }
 ]
