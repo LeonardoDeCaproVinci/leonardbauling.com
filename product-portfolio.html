@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Leonard Bauling | Product Portfolio</title>
+  <meta name="description" content="Orbitra product portfolio: a brochure-style look at Orbitra Identity and Orbitra Ledger, including live Azure dev endpoints and product direction.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#071524">
+  <link rel="canonical" href="https://leonardbauling.com/product-portfolio.html">
+  <meta property="og:site_name" content="Leonard Bauling">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:title" content="Leonard Bauling | Product Portfolio">
+  <meta property="og:description" content="Orbitra Identity and Orbitra Ledger: platform products shaped around cleaner identity, sharper money workflows, and reliable delivery.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://leonardbauling.com/product-portfolio.html">
+  <meta property="og:image" content="https://leonardbauling.com/assets/img/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Leonard Bauling | Product Portfolio">
+  <meta name="twitter:description" content="Orbitra Identity and Orbitra Ledger: platform products shaped around cleaner identity, sharper money workflows, and reliable delivery.">
+  <meta name="twitter:image" content="https://leonardbauling.com/assets/img/og-cover.png">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css?v=20260730a">
+</head>
+<body class="portfolio-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="index.html">Leonard Bauling</a>
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="product-portfolio.html">Product Portfolio</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section portfolio-hero">
+      <div class="container portfolio-grid">
+        <div class="reveal">
+          <p class="kicker">Orbitra Product Portfolio</p>
+          <h1>Two products, one operating idea: make the hard stuff feel strangely light.</h1>
+          <p class="lead">Orbitra Identity and Orbitra Ledger are being shaped as practical platform products: one to make access and application context feel clean, the other to make financial control feel clear enough to actually use every day.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#orbitra-identity">Orbitra Identity</a>
+            <a class="btn btn-outline" href="#orbitra-ledger">Orbitra Ledger</a>
+            <a class="btn btn-ghost" href="index.html#contact">Talk to Leonard</a>
+          </div>
+        </div>
+        <div class="portfolio-visual reveal" aria-hidden="true">
+          <div class="visual-orbit orbit-one"></div>
+          <div class="visual-orbit orbit-two"></div>
+          <div class="visual-orbit orbit-three"></div>
+          <div class="visual-core">
+            <span class="visual-core-label">Orbitra</span>
+          </div>
+          <div class="visual-node node-identity">
+            <strong>Identity</strong>
+            <span>context + trust</span>
+          </div>
+          <div class="visual-node node-ledger">
+            <strong>Ledger</strong>
+            <span>money + motion</span>
+          </div>
+          <div class="visual-node node-flow">
+            <strong>Delivery</strong>
+            <span>CI/CD + runtime</span>
+          </div>
+          <div class="visual-signal signal-a"></div>
+          <div class="visual-signal signal-b"></div>
+          <div class="visual-signal signal-c"></div>
+        </div>
+      </div>
+      <div class="bg-glow bg-glow-a"></div>
+      <div class="bg-glow bg-glow-b"></div>
+    </section>
+
+    <section class="section panel">
+      <div class="container reveal">
+        <h2>Product Snapshot</h2>
+        <p class="section-intro">Both products are live in Azure dev on Thursday, July 30, 2026, with delivery pipelines, health checks, and working browser or API endpoints. The write-up here is intentionally brochure-like: close enough to the code to be real, but still written for a human reading over coffee rather than in a sprint retro.</p>
+      </div>
+    </section>
+
+    <section id="orbitra-identity" class="section">
+      <div class="container reveal">
+        <article class="portfolio-card">
+          <div class="portfolio-card-head">
+            <div>
+              <p class="portfolio-label">Platform Product 01</p>
+              <h2>Orbitra Identity</h2>
+            </div>
+            <span class="chip">Headless identity service</span>
+          </div>
+          <p class="portfolio-copy">Orbitra Identity is the bouncer, concierge, and backstage pass system rolled into one. It is built to issue clean application-aware access, carry instance context with the token, and stay out of the user's way once trust has been established. The goal is not "identity as ceremony"; it is identity as a quiet but sharp control plane.</p>
+          <div class="portfolio-columns">
+            <div>
+              <h3>What it does</h3>
+              <ul class="portfolio-list">
+                <li>Authenticates users and issues JWTs with application and instance-aware claims.</li>
+                <li>Supports admin-managed user creation and application-instance access assignment.</li>
+                <li>Acts as the trust seam for downstream products like Orbitra Ledger.</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Live endpoints</h3>
+              <div class="endpoint-list">
+                <a class="endpoint-card" href="https://ca-orbitra-identity-dev.whitewater-85474b9c.australiaeast.azurecontainerapps.io/api/v1/meta" target="_blank" rel="noreferrer">
+                  <span class="endpoint-type">API Meta</span>
+                  <strong>/api/v1/meta</strong>
+                  <small>Version and runtime metadata.</small>
+                </a>
+                <a class="endpoint-card" href="https://ca-orbitra-identity-dev.whitewater-85474b9c.australiaeast.azurecontainerapps.io/health/ready" target="_blank" rel="noreferrer">
+                  <span class="endpoint-type">Health</span>
+                  <strong>/health/ready</strong>
+                  <small>Readiness with database connectivity.</small>
+                </a>
+                <a class="endpoint-card" href="https://ca-orbitra-identity-dev.whitewater-85474b9c.australiaeast.azurecontainerapps.io/swagger" target="_blank" rel="noreferrer">
+                  <span class="endpoint-type">Swagger</span>
+                  <strong>/swagger</strong>
+                  <small>Explore the live API surface.</small>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="orbitra-ledger" class="section panel">
+      <div class="container reveal">
+        <article class="portfolio-card portfolio-card-ledger">
+          <div class="portfolio-card-head">
+            <div>
+              <p class="portfolio-label">Platform Product 02</p>
+              <h2>Orbitra Ledger</h2>
+            </div>
+            <span class="chip">Browser app + API</span>
+          </div>
+          <p class="portfolio-copy">Orbitra Ledger is where the numbers stop pretending to be neutral and start becoming usable. It is being shaped as a money workflow product that helps budgets, categories, transactions, periods, and workspaces feel connected rather than scattered. The mood is less "enterprise accounting bunker" and more "calm command deck with receipts."</p>
+          <div class="portfolio-columns">
+            <div>
+              <h3>What it does</h3>
+              <ul class="portfolio-list">
+                <li>Uses Identity-issued tokens to scope access to the correct ledger instance.</li>
+                <li>Exposes API-backed workspace, account, category, period, budget, and transaction workflows.</li>
+                <li>Now includes an Azure-hosted Blazor browser app alongside the API deployment.</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Live endpoints</h3>
+              <div class="endpoint-list">
+                <a class="endpoint-card" href="https://storbitraledgerdev01.z8.web.core.windows.net/" target="_blank" rel="noreferrer">
+                  <span class="endpoint-type">Web</span>
+                  <strong>Hosted browser app</strong>
+                  <small>Blazor WebAssembly UI running in Azure static hosting.</small>
+                </a>
+                <a class="endpoint-card" href="https://ca-orbitra-ledger-dev.gentledune-2bfcbf7d.australiaeast.azurecontainerapps.io/swagger" target="_blank" rel="noreferrer">
+                  <span class="endpoint-type">API</span>
+                  <strong>/swagger</strong>
+                  <small>Browse the live Ledger API endpoints.</small>
+                </a>
+                <a class="endpoint-card" href="https://ca-orbitra-ledger-dev.gentledune-2bfcbf7d.australiaeast.azurecontainerapps.io/health/ready" target="_blank" rel="noreferrer">
+                  <span class="endpoint-type">Health</span>
+                  <strong>/health/ready</strong>
+                  <small>Readiness with database connectivity.</small>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container reveal">
+        <div class="portfolio-closing">
+          <h2>Why this page exists</h2>
+          <p class="section-intro">Because product work deserves a clearer front door than a pile of workflow files and health endpoints. This page is the quick "show me what you are building" version: sharp enough for a first impression, grounded enough to prove the products are real.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="index.html">Back to Main Site</a>
+            <a class="btn btn-outline" href="index.html#contact">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Leonard Bauling. Built for clarity and momentum.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js?v=20260628a"></script>
+</body>
+</html>

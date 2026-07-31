@@ -538,6 +538,277 @@ h2 {
   transform: none;
 }
 
+.portfolio-page {
+  background:
+    radial-gradient(1000px 500px at 12% -8%, rgba(246, 183, 60, 0.22), transparent 60%),
+    radial-gradient(900px 520px at 88% 8%, rgba(29, 211, 216, 0.2), transparent 62%),
+    var(--bg);
+}
+
+.portfolio-hero {
+  overflow: hidden;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.portfolio-visual {
+  position: relative;
+  min-height: 460px;
+  border-radius: 1.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background:
+    radial-gradient(circle at 50% 50%, rgba(29, 211, 216, 0.18), transparent 22%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.visual-core,
+.visual-node,
+.visual-orbit,
+.visual-signal {
+  position: absolute;
+}
+
+.visual-core {
+  top: 50%;
+  left: 50%;
+  width: 160px;
+  height: 160px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 35% 30%, #fff5d6, #f6b73c 42%, #7b4b00 100%);
+  box-shadow:
+    0 0 0 16px rgba(255, 255, 255, 0.06),
+    0 0 55px rgba(246, 183, 60, 0.3);
+}
+
+.visual-core-label {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2d1a00;
+}
+
+.visual-orbit {
+  top: 50%;
+  left: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotateOrbit 16s linear infinite;
+}
+
+.orbit-one {
+  width: 260px;
+  height: 260px;
+}
+
+.orbit-two {
+  width: 360px;
+  height: 220px;
+  animation-duration: 20s;
+  animation-direction: reverse;
+}
+
+.orbit-three {
+  width: 420px;
+  height: 320px;
+  animation-duration: 28s;
+}
+
+.visual-node {
+  display: grid;
+  gap: 0.15rem;
+  min-width: 150px;
+  padding: 0.9rem 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(7, 21, 36, 0.82);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(8px);
+}
+
+.visual-node strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+}
+
+.visual-node span {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.node-identity {
+  top: 3rem;
+  left: 1.8rem;
+  animation: floatNode 5.2s ease-in-out infinite;
+}
+
+.node-ledger {
+  right: 1.8rem;
+  bottom: 3rem;
+  animation: floatNode 6.4s ease-in-out infinite;
+}
+
+.node-flow {
+  top: 7rem;
+  right: 2.1rem;
+  animation: floatNode 5.8s ease-in-out infinite reverse;
+}
+
+.visual-signal {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 18px rgba(29, 211, 216, 0.65);
+}
+
+.signal-a {
+  top: 8.5rem;
+  left: 46%;
+  animation: pulseSignal 2s ease-in-out infinite;
+}
+
+.signal-b {
+  bottom: 6.5rem;
+  left: 29%;
+  animation: pulseSignal 2.4s ease-in-out infinite;
+}
+
+.signal-c {
+  top: 50%;
+  right: 26%;
+  animation: pulseSignal 1.8s ease-in-out infinite;
+}
+
+.portfolio-card,
+.portfolio-closing {
+  border: 1px solid var(--line);
+  border-radius: 1.2rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
+    var(--surface);
+  padding: 1.4rem;
+  box-shadow: var(--shadow);
+}
+
+.portfolio-card-ledger {
+  background:
+    radial-gradient(circle at top right, rgba(29, 211, 216, 0.13), transparent 26%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
+    var(--surface);
+}
+
+.portfolio-card-head {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.portfolio-label {
+  margin: 0 0 0.45rem;
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.74rem;
+}
+
+.portfolio-copy {
+  margin: 0 0 1.3rem;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.portfolio-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 1.3rem;
+}
+
+.portfolio-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--text-muted);
+}
+
+.portfolio-list li {
+  margin-bottom: 0.7rem;
+}
+
+.endpoint-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.endpoint-card {
+  display: block;
+  text-decoration: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.endpoint-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(29, 211, 216, 0.45);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.endpoint-card strong,
+.endpoint-card small,
+.endpoint-card .endpoint-type {
+  display: block;
+}
+
+.endpoint-card strong {
+  margin: 0.2rem 0 0.3rem;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.endpoint-card small {
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.endpoint-type {
+  color: var(--accent-2);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@keyframes rotateOrbit {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes floatNode {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulseSignal {
+  0%, 100% { opacity: 0.45; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -556,13 +827,25 @@ h2 {
     transform: none;
     transition: none;
   }
+
+  .visual-orbit,
+  .node-identity,
+  .node-ledger,
+  .node-flow,
+  .signal-a,
+  .signal-b,
+  .signal-c {
+    animation: none;
+  }
 }
 
 @media (max-width: 920px) {
   .hero-grid,
+  .portfolio-grid,
   .card-grid,
   .project-grid,
-  .stack-grid {
+  .stack-grid,
+  .portfolio-columns {
     grid-template-columns: 1fr;
   }
 
@@ -596,5 +879,38 @@ h2 {
 
   .site-nav.is-open {
     display: flex;
+  }
+
+  .portfolio-visual {
+    min-height: 380px;
+  }
+
+  .visual-core {
+    width: 132px;
+    height: 132px;
+  }
+
+  .visual-node {
+    min-width: 118px;
+    padding: 0.7rem 0.8rem;
+  }
+
+  .node-identity {
+    top: 1.4rem;
+    left: 1rem;
+  }
+
+  .node-flow {
+    top: 5.3rem;
+    right: 1rem;
+  }
+
+  .node-ledger {
+    right: 1rem;
+    bottom: 1.4rem;
+  }
+
+  .portfolio-card-head {
+    flex-direction: column;
   }
 }
