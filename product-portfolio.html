@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Leonard Bauling | Product Portfolio</title>
-  <meta name="description" content="Orbitra product portfolio: a brochure-style look at Orbitra Identity and Orbitra Ledger, including live Azure dev endpoints and product direction.">
+  <meta name="description" content="Orbitra product portfolio: a brochure-style look at Orbitra Identity and Orbitra Ledger, focused on product direction and delivery shape rather than raw endpoint listings.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#071524">
   <link rel="canonical" href="https://leonardbauling.com/product-portfolio.html">
@@ -90,7 +90,7 @@
     <section class="section panel">
       <div class="container reveal">
         <h2>Product Snapshot</h2>
-        <p class="section-intro">Both products are live in Azure dev on Thursday, July 30, 2026, with delivery pipelines, health checks, and working browser or API endpoints. The write-up here is intentionally brochure-like: close enough to the code to be real, but still written for a human reading over coffee rather than in a sprint retro.</p>
+        <p class="section-intro">Both products are live in Azure dev on Tuesday, August 11, 2026, with delivery pipelines, working browser surfaces, and a cleaner deployment story behind them. The write-up here is intentionally brochure-like: close enough to the code to be real, but still written for a human reading over coffee rather than in a sprint retro.</p>
       </div>
     </section>
 
@@ -115,24 +115,8 @@
               </ul>
             </div>
             <div>
-              <h3>Live endpoints</h3>
-              <div class="endpoint-list">
-                <a class="endpoint-card" href="https://ca-orbitra-identity-dev.whitewater-85474b9c.australiaeast.azurecontainerapps.io/api/v1/meta" target="_blank" rel="noreferrer">
-                  <span class="endpoint-type">API Meta</span>
-                  <strong>/api/v1/meta</strong>
-                  <small>Version and runtime metadata.</small>
-                </a>
-                <a class="endpoint-card" href="https://ca-orbitra-identity-dev.whitewater-85474b9c.australiaeast.azurecontainerapps.io/health/ready" target="_blank" rel="noreferrer">
-                  <span class="endpoint-type">Health</span>
-                  <strong>/health/ready</strong>
-                  <small>Readiness with database connectivity.</small>
-                </a>
-                <a class="endpoint-card" href="https://ca-orbitra-identity-dev.whitewater-85474b9c.australiaeast.azurecontainerapps.io/" target="_blank" rel="noreferrer">
-                  <span class="endpoint-type">Service Root</span>
-                  <strong>/</strong>
-                  <small>Top-level service metadata and environment response.</small>
-                </a>
-              </div>
+              <h3>Product shape</h3>
+              <p class="portfolio-copy">Identity is now a supporting platform seam rather than something this page needs to expose through operator shortcuts. The value is in the clean access model, application-instance context, and reuse across products, not in asking a reader to click health checks.</p>
             </div>
           </div>
         </article>
@@ -156,26 +140,16 @@
               <ul class="portfolio-list">
                 <li>Uses Identity-issued tokens to scope access to the correct ledger instance.</li>
                 <li>Exposes API-backed workspace, account, category, period, budget, and transaction workflows.</li>
-                <li>Now includes an Azure-hosted Blazor browser app alongside the API deployment.</li>
+                <li>Now includes an Azure-hosted Vue browser app alongside the API deployment.</li>
               </ul>
             </div>
             <div>
-              <h3>Live endpoints</h3>
+              <h3>Live surface</h3>
               <div class="endpoint-list">
                 <a class="endpoint-card" href="https://storbitraledgerdev01.z8.web.core.windows.net/" target="_blank" rel="noreferrer">
                   <span class="endpoint-type">Web</span>
                   <strong>Hosted browser app</strong>
-                  <small>Blazor WebAssembly UI running in Azure static hosting.</small>
-                </a>
-                <a class="endpoint-card" href="https://ca-orbitra-ledger-dev.gentledune-2bfcbf7d.australiaeast.azurecontainerapps.io/api/v1/bootstrap" target="_blank" rel="noreferrer">
-                  <span class="endpoint-type">API Bootstrap</span>
-                  <strong>/api/v1/bootstrap</strong>
-                  <small>Application key, default instance, issuer, audience, and runtime wiring.</small>
-                </a>
-                <a class="endpoint-card" href="https://ca-orbitra-ledger-dev.gentledune-2bfcbf7d.australiaeast.azurecontainerapps.io/health/ready" target="_blank" rel="noreferrer">
-                  <span class="endpoint-type">Health</span>
-                  <strong>/health/ready</strong>
-                  <small>Readiness with database connectivity.</small>
+                  <small>Vue browser UI running in Azure static hosting.</small>
                 </a>
               </div>
             </div>
