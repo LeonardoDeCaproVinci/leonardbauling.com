@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - "index.html"
+      - "product-portfolio.html"
       - "robots.txt"
       - "sitemap.xml"
       - "site.webmanifest"
