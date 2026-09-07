@@ -1,4 +1,4 @@
-const BUILD_ID = "20260626a";
+const BUILD_ID = "20260907a";
 
 const navToggle = document.getElementById("nav-toggle");
 const siteNav = document.getElementById("site-nav");

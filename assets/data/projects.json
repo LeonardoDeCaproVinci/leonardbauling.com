@@ -26,7 +26,12 @@
   },
   {
     "title": "Orbitra Product Suite",
-    "summary": "Designing and building a private suite of applications covering identity, budgeting, travel operations, and personal productivity, with products focused on authentication, ledger-based budgeting, reservation workflows, and structured delivery tooling.",
-    "tags": ["Private Product Suite", "Identity", "Budgeting", "Travel Operations", "Product Design", ".NET"]
+    "summary": "Designing and building a private suite of applications spanning identity, budgeting, media governance, travel operations, and personal productivity, with products focused on trusted access, clear workflows, reusable digital assets, and reliable delivery.",
+    "tags": ["Private Product Suite", "Identity", "Ledger", "Media Governance", "Product Design", ".NET"]
+  },
+  {
+    "title": "Orbitra Media Library",
+    "summary": "Built an identity-aware media library for reusable images, video, and documents, combining contributor workflows, metadata and usage-rights management, signed asset delivery, lifecycle history, and reversible archive controls.",
+    "tags": ["Vue", ".NET", "PostgreSQL", "Identity", "Signed URLs", "CI/CD"]
   }
 ]
