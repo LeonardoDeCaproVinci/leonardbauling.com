@@ -95,7 +95,7 @@
     <section class="section panel">
       <div class="container reveal">
         <h2>Product Snapshot</h2>
-        <p class="section-intro">All three products are live on the Hostinger-backed Orbitra platform, with working browser surfaces, CI/CD automation, and a clear runtime story behind them. The write-up here is intentionally brochure-like: close enough to the code to be real, but still written for a human reading over coffee rather than in a sprint retro.</p>
+        <p class="section-intro">All three products are live on the Hostinger-backed Orbitra platform, with working browser surfaces, CI/CD automation, database backups, and a clear runtime story behind them. The write-up here is intentionally brochure-like: close enough to the code to be real, but still written for a human reading over coffee rather than in a sprint retro.</p>
       </div>
     </section>
 
@@ -114,9 +114,10 @@
             <div>
               <h3>What it does</h3>
               <ul class="portfolio-list">
-                <li>Authenticates users and issues JWTs with application and instance-aware claims.</li>
+                <li>Authenticates users and issues short-lived JWTs with application and instance-aware claims.</li>
                 <li>Supports admin-managed user creation and application-instance access assignment.</li>
                 <li>Acts as the trust seam for downstream products like Orbitra Ledger and Orbitra Media.</li>
+                <li>Uses secure rotating refresh sessions so browser access can renew without storing passwords locally.</li>
               </ul>
             </div>
             <div>

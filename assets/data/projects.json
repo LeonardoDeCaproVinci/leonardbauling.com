@@ -6,8 +6,8 @@
   },
   {
     "title": "WiseTech Academy Content Platform Convergence",
-    "summary": "Led architecture convergence across authoring, content, and delivery streams for WiseTech Academy, defining a canonical content model, governance path, and migration strategy to unify fragmented repositories into one scalable platform spine.",
-    "tags": ["Content Platform", "Architecture", "Migration Strategy", "Governance", "LMS"]
+    "summary": "Led architecture and hands-on delivery across authoring, content, and delivery streams for WiseTech Academy, including a live CMS modernisation, a canonical content model, governance, and a repeatable content-as-code migration path.",
+    "tags": ["Content Platform", "Architecture", "CMS Modernisation", "Content as Code", "Governance", "LMS"]
   },
   {
     "title": "WiseTech Academy Packaging and Validation Pipeline",
@@ -26,8 +26,8 @@
   },
   {
     "title": "Orbitra Product Suite",
-    "summary": "Designing and building a private suite of applications spanning identity, budgeting, media governance, travel operations, and personal productivity, with products focused on trusted access, clear workflows, reusable digital assets, and reliable delivery.",
-    "tags": ["Private Product Suite", "Identity", "Ledger", "Media Governance", "Product Design", ".NET"]
+    "summary": "Designing, building, and operating a private production suite spanning identity, budgeting, media governance, travel operations, and personal productivity. The platform combines trusted access, clear workflows, reusable digital assets, and reliable CI/CD-backed delivery.",
+    "tags": ["Private Product Suite", "Identity", "Ledger", "PostgreSQL", "Secure Sessions", "CI/CD"]
   },
   {
     "title": "Orbitra Media Library",
