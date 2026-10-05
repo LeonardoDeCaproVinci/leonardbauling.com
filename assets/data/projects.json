@@ -26,12 +26,17 @@
   },
   {
     "title": "Orbitra Product Suite",
-    "summary": "Designing, building, and operating a private production suite spanning identity, budgeting, media governance, travel operations, and personal productivity. The platform combines trusted access, clear workflows, reusable digital assets, and reliable CI/CD-backed delivery.",
-    "tags": ["Private Product Suite", "Identity", "Ledger", "PostgreSQL", "Secure Sessions", "CI/CD"]
+    "summary": "Designing, building, and operating a private production suite spanning shared identity, financial workflows, media governance, and structured learning. The platform combines trusted access, clear workflows, reusable digital assets, and reliable CI/CD-backed delivery.",
+    "tags": ["Private Product Suite", "Identity", "Ledger", "Media", "Skills Dojo", "CI/CD"]
   },
   {
     "title": "Orbitra Media Library",
     "summary": "Built an identity-aware media library for reusable images, video, and documents, combining contributor workflows, metadata and usage-rights management, signed asset delivery, lifecycle history, and reversible archive controls.",
     "tags": ["Vue", ".NET", "PostgreSQL", "Identity", "Signed URLs", "CI/CD"]
+  },
+  {
+    "title": "Orbitra Skills Dojo",
+    "summary": "Built a production learning and authoring environment with public discovery, member learning, learner progress, and Sensei content administration, structured around a governed skill ontology.",
+    "tags": ["Vue", ".NET", "PostgreSQL", "Identity", "Learning Platform", "Skill Ontology"]
   }
 ]
