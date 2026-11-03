@@ -1,13 +1,18 @@
 [
   {
+    "title": "WTA.Next Secure Learning Platform Prototype",
+    "summary": "Built a runnable end-to-end learning-platform prototype that joined secure single sign-on, access-aware discovery, and click-through delivery across real services. It turned the target architecture into an executable proof, validating identity, search, and learning-system integration together.",
+    "tags": ["Platform Prototype", "OIDC / PKCE", "Secure Identity", "Search", "Systems Integration", ".NET"]
+  },
+  {
     "title": "WiseTech Academy LMS Architecture",
     "summary": "Defined and delivered LMS architecture across billing, integrations, proctoring, and CI/CD foundations, improving platform extensibility and release reliability.",
     "tags": ["LMS", "Architecture", "Billing", "Integrations", "Proctoring", "CI/CD"]
   },
   {
     "title": "WiseTech Academy Content Platform Convergence",
-    "summary": "Led architecture and hands-on delivery across authoring, content, and delivery streams for WiseTech Academy, including a live CMS modernisation, a canonical content model, governance, and a repeatable content-as-code migration path.",
-    "tags": ["Content Platform", "Architecture", "CMS Modernisation", "Content as Code", "Governance", "LMS"]
+    "summary": "Led architecture and hands-on delivery across authoring, content, and delivery streams for WiseTech Academy, including live CMS modernisation, a canonical reusable-content model, and a governed content-as-code path. The resulting approach supports publish-once, reference-everywhere delivery with versioned lesson containers rather than duplicated course material.",
+    "tags": ["Content Platform", "Architecture", "CMS Modernisation", "Content as Code", "Content Reuse", "LMS"]
   },
   {
     "title": "WiseTech Academy Packaging and Validation Pipeline",
